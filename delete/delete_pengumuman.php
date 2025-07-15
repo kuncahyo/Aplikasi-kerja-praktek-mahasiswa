@@ -1,0 +1,6 @@
+<?php
+include ('../koneksi/koneksi.php');
+$id=$_GET['id'];
+$sql = (mysqli_query($koneksi,"DELETE FROM `pengumuman` WHERE id=$id"));
+echo "<script type='text/javascript'>location.replace('../Control-Pengumuman.php');</script>";
+?>

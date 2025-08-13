@@ -52,7 +52,7 @@
                                 <?php
                                  $no=1;
                                  $kodesesi=$_SESSION['id'];
-                                 echo $kodesesi;
+                                //  echo $kodesesi;
                                     $sql = "select max(tanggal_pelaksanaan) as tgl from pengumuman where jenis_pengumuman = 'Berita KP'" ;
                                     $query = mysqli_query($koneksi, $sql);
                                        while ($row = mysqli_fetch_array($query))

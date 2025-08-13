@@ -64,7 +64,7 @@
                                 {
                                     $iddosen= $row['id'];
                                 }
-                          $sql ="SELECT * FROM `bimbingan` where id_dosen=$iddosen GROUP BY namalengkap";
+                          $sql ="SELECT DISTINCT * FROM `bimbingan` where id_dosen=$iddosen";
                           //id_dosen = id login
                           $query = mysqli_query($koneksi, $sql);
                              while ($row = mysqli_fetch_array($query))

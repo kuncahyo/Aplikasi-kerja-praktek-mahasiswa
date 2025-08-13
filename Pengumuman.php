@@ -52,7 +52,7 @@
                                 <?php
                                  $no=1;
                                  $kodesesi=$_SESSION['id'];
-                              //    echo $kodesesi;
+                                 echo $kodesesi;
                                     $sql = "select max(tanggal_pelaksanaan) as tgl from pengumuman where jenis_pengumuman = 'Berita KP'" ;
                                     $query = mysqli_query($koneksi, $sql);
                                        while ($row = mysqli_fetch_array($query))
@@ -131,7 +131,7 @@
                                     <tbody>
                                         <?php
                                         $no=1;
-                                        $sql = "select distinct p.subject, u.email from pesan p join users u on p.id_pertama=u.id where id_pertama=".$kodesesi." or id_kedua=".$kodesesi." GROUP BY p.subject;";
+                                        $sql = "select distinct p.subject, u.email from pesan p join users u on p.id_pertama=u.id where id_pertama=".$kodesesi." or id_kedua=".$kodesesi." group by p.subject, u.email;";
                                         $query = mysqli_query($koneksi, $sql);
                                             while ($row = mysqli_fetch_array($query))
                                             {
